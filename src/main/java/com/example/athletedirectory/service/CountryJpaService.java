@@ -71,11 +71,11 @@ public class CountryJpaService implements CountryRepository {
 
     @Override
     public List<Athlete> getCountryAthletes(int countryId) {
-        try{
+        try {
             Country country = countryJpaRepository.findById(countryId).get();
             return athleteJpaRepository.findByCountry(country);
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        }     
+        }
     }
 }

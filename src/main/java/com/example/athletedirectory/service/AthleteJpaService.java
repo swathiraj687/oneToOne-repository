@@ -80,6 +80,7 @@ public class AthleteJpaService implements AthleteRepository {
         }
         throw new ResponseStatusException(HttpStatus.NO_CONTENT);
     }
+
     @Override
     public Country getAthleteCountry(int athleteId) {
         try {
